@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{1667E4A5-D4EC-435E-8DF4-41A80B306D55}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "domain\Store\Store.csproj", "{4D55CF2F-40C0-4E25-822E-CE35854F461A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{04BB32B3-8013-4116-B45C-CC9D6409F951}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Memory", "infrastructure\ClassLibrary1\Store.Memory.csproj", "{8CE7B1A8-58A1-47E6-9663-99892A582BE5}"
 EndProject
@@ -62,10 +58,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{4D55CF2F-40C0-4E25-822E-CE35854F461A} = {1667E4A5-D4EC-435E-8DF4-41A80B306D55}
-		{8CE7B1A8-58A1-47E6-9663-99892A582BE5} = {04BB32B3-8013-4116-B45C-CC9D6409F951}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AC8DD20-8EE8-4FE2-86B0-6CD466E1514F}
