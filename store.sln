@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "domain\Store\Store.csproj", "{4D55CF2F-40C0-4E25-822E-CE35854F461A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Memory", "infrastructure\ClassLibrary1\Store.Memory.csproj", "{8CE7B1A8-58A1-47E6-9663-99892A582BE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Memory", "infrastructure\ClassLibrary1\Store.Memory.csproj", "{8CE7B1A8-58A1-47E6-9663-99892A582BE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Web", "presentation\Store.Web\Store.Web.csproj", "{44374191-2750-4996-B6DD-346F5AE34E27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Web", "presentation\Store.Web\Store.Web.csproj", "{44374191-2750-4996-B6DD-346F5AE34E27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Tests", "domain\Store.Tests\Store.Tests.csproj", "{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,18 @@ Global
 		{44374191-2750-4996-B6DD-346F5AE34E27}.Release|x64.Build.0 = Release|Any CPU
 		{44374191-2750-4996-B6DD-346F5AE34E27}.Release|x86.ActiveCfg = Release|Any CPU
 		{44374191-2750-4996-B6DD-346F5AE34E27}.Release|x86.Build.0 = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|x64.Build.0 = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Debug|x86.Build.0 = Debug|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|x64.ActiveCfg = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|x64.Build.0 = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|x86.ActiveCfg = Release|Any CPU
+		{AF3B72A9-D7E7-4EEF-9E01-74731894F73E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
