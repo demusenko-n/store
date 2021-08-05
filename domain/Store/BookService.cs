@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Store
 {
@@ -13,8 +14,13 @@ namespace Store
             _bookRepository = bookRepository;
         }
 
-        public IEnumerable<Book> GetAllByQuery(string query)
+        public IEnumerable<Book> GetAllByQuery(string? query)
         {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return Enumerable.Empty<Book>();
+            }
+
             if (Book.IsIsbn(query))
             {
                 return _bookRepository.GetAllByIsbn(query);
