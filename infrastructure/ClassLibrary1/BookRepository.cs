@@ -6,17 +6,23 @@ namespace Store.Memory
 {
     public class BookRepository : IBookRepository
     {
-        private readonly Book[] books =
+        private readonly Book[] _books =
         {
-            new (1, "Art", "auth"),
-            new (2, "Brt", "buth"),
-            new (3, "Crt", "cuth"),
-            new (4, "Drt", "duth")
+            new (1, "ISBN1231231231", "D. Knuth", "Art of Programming"),
+            new (2, "ISBN1231231232", "M. Fowler", "Refactoring"),
+            new (3, "ISBN1231231233", "B. Kernighan, D. Ritchie", "C Programming Language")
         };
 
-        public IEnumerable<Book> GetAllByTitle(string titlePart)
+        public IEnumerable<Book> GetAllByIsbn(string isbn)
         {
-            return books.Where(book => book.Title.Contains(titlePart, StringComparison.CurrentCultureIgnoreCase));
+            return _books.Where(book => book.Isbn.Equals(isbn, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        public IEnumerable<Book> GetAllByTitleOrAuthor(string titleOrAuthorPart)
+        {
+            return _books.Where(book =>
+                book.Title.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase) ||
+                book.Author.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase));
         }
     }
 }
