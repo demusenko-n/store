@@ -8,9 +8,9 @@ namespace Store.Memory
     {
         private readonly Book[] _books =
         {
-            new (1, "ISBN 12312-31231", "D. Knuth", "Art of Programming"),
-            new (2, "ISBN 12312-31232", "M. Fowler", "Refactoring"),
-            new (3, "ISBN 12312-31233", "B. Kernighan, D. Ritchie", "C Programming Language")
+            new (1, "ISBN1231231231", "D. Knuth", "Art of Programming"),
+            new (2, "ISBN1231231232", "M. Fowler", "Refactoring"),
+            new (3, "ISBN1231231233", "B. Kernighan, D. Ritchie", "C Programming Language")
         };
 
         public IEnumerable<Book> GetAllByIsbn(string isbn)
