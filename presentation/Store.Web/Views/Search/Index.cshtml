@@ -1,47 +1,71 @@
-﻿@model IEnumerable<Store.Book>
+﻿@model IEnumerable<Book>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Search results";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+<h1>Search results</h1>
+@if (!Model.Any())
+{
+    <p>Nothing found :(</p>
 }
-    </tbody>
-</table>
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Id)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Title)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Author)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Isbn)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Description)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Price)
+                </td>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Index", "Book", new{id = book.Id})">
+                            @book.Id
+                        </a>
+                    </td>
+                    <td>
+                        @book.Title
+                    </td>
+                    <td>
+                        @book.Author
+                    </td>
+                    <td>
+                        @book.Isbn
+                    </td>
+                    <td>
+                        @book.Description
+                    </td>
+                    <td>
+                        @book.Price
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+
