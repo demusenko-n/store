@@ -24,5 +24,10 @@ namespace Store.Memory
                 book.Title.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase) ||
                 book.Author.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase));
         }
+
+        public Book? GetById(int id)
+        {
+            return _books.SingleOrDefault(book => book.Id == id);
+        }
     }
 }
