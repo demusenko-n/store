@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\domain\Store\Store.csproj" />
-    <ProjectReference Include="..\..\infrastructure\ClassLibrary1\Store.Memory.csproj" />
+    <ProjectReference Include="..\..\infrastructure\Store.Memory\Store.Memory.csproj" />
   </ItemGroup>
 
   <ItemGroup>
