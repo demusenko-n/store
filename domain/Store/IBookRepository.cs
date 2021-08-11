@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Store
 {
@@ -7,5 +6,6 @@ namespace Store
     {
         IEnumerable<Book> GetAllByIsbn(string isbn);
         IEnumerable<Book> GetAllByTitleOrAuthor(string titleOrAuthorPart);
+        Book? GetById(int id);
     }
 }
