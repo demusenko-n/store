@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Moq;
+﻿using Moq;
 using Xunit;
 
 namespace Store.Tests
@@ -15,8 +10,9 @@ namespace Store.Tests
         {
             Mock<IBookRepository> bookRepositoryStub = new(MockBehavior.Strict);
 
-            Book bookIsbn = new(1, "ISBN 12312-31231", "D. Knuth", "Art of Programming");
-            Book bookTitleOrAuthor = new(2, "ISBN 12312-31232", "M. Fowler", "Refactoring");
+            Book bookIsbn = new(1, "ISBN1231231231", "D. Knuth", "Art of Programming", "Art of Programming description",
+                7.19M);
+            Book bookTitleOrAuthor = new(2, "ISBN1231231232", "M. Fowler", "Refactoring", "Refactoring description", 12.45M);
 
             bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>()))
                 .Returns(new[]
@@ -43,8 +39,9 @@ namespace Store.Tests
         {
             Mock<IBookRepository> bookRepositoryStub = new(MockBehavior.Strict);
 
-            Book bookIsbn = new(1, "ISBN 12312-31231", "D. Knuth", "Art of Programming");
-            Book bookTitleOrAuthor = new(2, "ISBN 12312-31232", "M. Fowler", "Refactoring");
+            Book bookIsbn = new(1, "ISBN1231231231", "D. Knuth", "Art of Programming", "Art of Programming description",
+                7.19M);
+            Book bookTitleOrAuthor = new(2, "ISBN1231231232", "M. Fowler", "Refactoring", "Refactoring description", 12.45M);
 
             bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>()))
                 .Returns(new[]
