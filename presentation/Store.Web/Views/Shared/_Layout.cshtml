@@ -24,13 +24,35 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-black-50" >
+                                @{
+                                    Cart cart = Context.Session.GetCart() ?? new Cart();
+
+                                    if (cart.Items.Count == 0)
+                                    {
+                                        @:Cart is empty
+                                    }
+                                    else
+                                    {
+                                        @:Cart: @cart.Price
+                                    }
+                                }
+                            </span>
+                        </li>
                     </ul>
+                    <form action="@Url.Action("Index", "Search")" method="get">
+                        <input type="text" name="query" value=""/>
+                        <button type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
+        
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            
             @RenderBody()
         </main>
     </div>
