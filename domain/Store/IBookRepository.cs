@@ -6,6 +6,6 @@ namespace Store
     {
         IEnumerable<Book> GetAllByIsbn(string isbn);
         IEnumerable<Book> GetAllByTitleOrAuthor(string titleOrAuthorPart);
-        Book? GetById(int id);
+        Book GetById(int id);
     }
 }
