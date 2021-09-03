@@ -27,9 +27,9 @@ namespace Store.Memory
                 book.Author.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase));
         }
 
-        public Book? GetById(int id)
+        public Book GetById(int id)
         {
-            return _books.SingleOrDefault(book => book.Id == id);
+            return _books.Single(book => book.Id == id);
         }
     }
 }
