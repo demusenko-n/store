@@ -20,6 +20,8 @@ namespace Store.Memory
 
         public IEnumerable<Book> GetAllByTitleOrAuthor(string titleOrAuthorPart)
         {
+
+
             return _books.Where(book =>
                 book.Title.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase) ||
                 book.Author.Contains(titleOrAuthorPart, StringComparison.CurrentCultureIgnoreCase));
