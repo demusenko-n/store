@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Formatters;
+﻿using Microsoft.AspNetCore.Mvc;
 using Store.Web.Models;
 
 namespace Store.Web.Controllers
@@ -19,10 +15,10 @@ namespace Store.Web.Controllers
         {
             var book = _bookRepository.GetById(id);
 
-            if (book == null)
-            {
-                return View("Error", new ErrorViewModel { RequestId = $"Cannot find book with id {id}" });
-            }
+            //if (book == null)
+            //{
+            //    return View("Error", new ErrorViewModel { RequestId = $"Cannot find book with id {id}" });
+            //}
 
             Cart cart = HttpContext.Session.GetCart() ?? new Cart();
             if (cart.Items.ContainsKey(id))

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using Store.Web.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Store.Web.Controllers
 {
@@ -14,10 +12,8 @@ namespace Store.Web.Controllers
         }
         public IActionResult Index(int id)
         {
-            Book? book = _bookRepository.GetById(id);
-            return book == null ? 
-                View("Error", new ErrorViewModel { RequestId = $"Cannot find book with id {id}" }) 
-                : View(book);
+            Book book = _bookRepository.GetById(id);
+            return View(book);
         }
     }
 }
